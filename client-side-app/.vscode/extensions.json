@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "dsznajder.es7-react-js-snippets",
+        "esbenp.prettier-vscode",
+        "bracketpaircolordlw.bracket-pair-color-dlw",
+        "streetsidesoftware.code-spell-checker",
+        "christian-kohler.npm-intellisense",
+        "hossaini.bootstrap-intellisense",
+        "formulahendry.auto-rename-tag",
+        "vscode-icons-team.vscode-icons"
+    ]
+}

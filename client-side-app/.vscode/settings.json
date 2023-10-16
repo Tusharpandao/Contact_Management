@@ -1,0 +1,15 @@
+{
+    "cSpell.words": [
+        "fontawesome",
+        "fortawesome"
+    ],
+    "workbench.activityBar.visible": true,
+    "explorer.compactFolders": true,
+    "explorer.confirmDelete": true,
+    "explorer.confirmUndo": "default",
+    "explorer.copyRelativePathSeparator": "auto",
+    "explorer.decorations.badges": true,
+    "explorer.decorations.colors": true,
+    "outline.collapseItems": "alwaysExpand",
+    "explorer.openEditors.visible": 4
+}

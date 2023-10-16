@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+body{
+    background-color: #d6a282 !important;
+    font-family: 'Ubuntu', sans-serif !important;
+}
+.img-fluid{
+    
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+  
+}
+/* .navbar{
+  position: sticky !important;
+  top: 0px !important;
+  z-index: 100;
+} */
