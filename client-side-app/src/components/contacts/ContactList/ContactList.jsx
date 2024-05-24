@@ -4,9 +4,10 @@ import { ContactServices } from "../../../services/ContactService";
 import Spinner from "../../Spinner/Spinner";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// import NavBar from "../../NavBar/NavBar";
 
 const ContactList = () => {
-  const [contacts, setContacts] = useState([]);
+  let  [contacts, setContacts] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -80,7 +81,7 @@ const ContactList = () => {
   return (
     <div>
       <ToastContainer />
-      
+      {/* <NavBar/> */}
         {/* <pre> {JSON.stringify(contacts)}</pre> */}
         <section className="contact-search p-3">
           <div className="container">
@@ -116,7 +117,7 @@ const ContactList = () => {
                   </form>
                 </div>
                 <div className="col-md-1 mb-2">
-                  <button className="btn btn-primary  ">
+                  <button className="btn btn-primary" onClick={()=>{setSearchInput("")}}>
                     <i className="fa fa-close"></i>
                   </button>
                 </div>
@@ -134,17 +135,18 @@ const ContactList = () => {
                   {(searchInput === "" ? contacts : searchResults).map(
                     (contact) => (
                       <div className="col-md-6 mb-4  ">
-                        <div className="card">
-                          <div className="card-body">
-                            <div className="row">
-                              <div className="col-md-4">
+                        <div className="card " >
+                          <div className="card-body" >
+                            <div className="row d-flex justify-content-center    align-items-center   flex-column flex-lg-row  ">
+                              {/* col-md-1 d-flex flex-row flex-md-column  align-items-center  justify-content-center */}
+                              <div className="col-4 mb-2 " >
                                 <img
                                   src={contact.photo}
-                                  alt=""
+                                  alt={contact.name}
                                   className="img-fluid"
                                 />
                               </div>
-                              <div className="col-md-7 d-flex align-items-center">
+                              <div className="col-7 d-flex align-items-center mb-2  " >
                                 <ul className="list-group">
                                   <li className="list-group-item list-group-item-action">
                                     {" "}
@@ -167,27 +169,27 @@ const ContactList = () => {
                                   </li>
                                 </ul>
                               </div>
-                              <div className="col-md-1 d-flex   flex-column align-items-center p-1    ">
+                              <div className="col-1 d-flex flex-row  flex-lg-column justify-content-center align-items-center   " >
                               {/* col-md-1 d-flex flex-row flex-md-column  align-items-center  justify-content-center */}
                                 <Link
                                   to={`/contacts/view/${contact.id}`}
-                                  className="btn btn-warning my-1"
+                                  className="btn btn-warning  m-1 "
                                 >
-                                  <i className="fa fa-eye my-1" />
+                                  <i className="fa fa-eye " />
                                 </Link>
                                 <Link
                                   to={`/contacts/edit/${contact.id}`}
-                                  className="btn btn-primary my-1"
+                                  className="btn btn-primary m-1 "
                                 >
-                                  <i className="fa fa-pen my-1" />
+                                  <i className="fa fa-pen " />
                                 </Link>
                                 <button
-                                  className="btn btn-danger"
+                                  className="btn btn-danger m-1  "
                                   onClick={() => {
                                     deleteContact(contact.id);
                                   }}
                                 >
-                                  <i className="fa fa-trash my-1" />
+                                  <i className="fa fa-trash " />
                                 </button>
                               </div>
                             </div>

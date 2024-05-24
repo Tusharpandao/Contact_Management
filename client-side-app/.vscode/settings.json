@@ -3,7 +3,6 @@
         "fontawesome",
         "fortawesome"
     ],
-    "workbench.activityBar.visible": true,
     "explorer.compactFolders": true,
     "explorer.confirmDelete": true,
     "explorer.confirmUndo": "default",

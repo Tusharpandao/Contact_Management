@@ -42,10 +42,11 @@ const AddContact = () => {
                 }
                 // alert("Contact Added Successfully");
                 // window.location.href = '/';
-                toast.success("Contact updated successfully", {
+                toast.success("Contact added  successfully", {
                     position: "top-center",
                     autoClose: 2000,
                   });  
+                  window.location.href = '/';
                
                 
             })
